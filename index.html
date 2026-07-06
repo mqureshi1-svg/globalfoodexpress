@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Food Express | Indo-Pak & Mediterranean Grocery</title>
+
+  <meta name="description" content="Global Food Express offers Indo-Pak and Mediterranean groceries, fresh produce, authentic spices, frozen foods, snacks, and 100% Zabiha Halal products in Rosenberg and Synott/Sugar Land." />
+
+  <style>
+    :root {
+      --green: #166534;
+      --dark-green: #064e3b;
+      --light-green: #22c55e;
+      --cream: #fff7ed;
+      --gold: #f59e0b;
+      --brown: #3b2414;
+      --white: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #f7f7f2;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(6, 78, 59, 0.88), rgba(6, 78, 59, 0.9)),
+        url("images/hero-grocery.jpg");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      text-align: center;
+      padding: 70px 20px 60px;
+    }
+
+    .hero-logo {
+      max-width: 170px;
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      background: var(--white);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .express {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #15803d);
+      color: var(--white);
+      padding: 8px 18px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      margin-top: 8px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: 18px auto 0;
+      font-size: 1.2rem;
+    }
+
+    .hero-badges {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .nav {
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-weight: 700;
+    }
+
+    .nav a {
+      color: var(--dark-green);
+    }
+
+    section {
+      padding: 55px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      color: var(--dark-green);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      color: var(--green);
+      margin-bottom: 10px;
+      font-size: 1.35rem;
+    }
+
+    .products .card {
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .locations {
+      background: var(--cream);
+    }
+
+    .location-card {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 28px;
+      background: var(--white);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    }
+
+    .location-card h3 {
+      font-size: 2rem;
+      color: var(--dark-green);
+      margin-bottom: 12px;
+    }
+
+    .location-tag {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .info-line {
+      margin: 10px 0;
+      font-size: 1.05rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      color: var(--white);
+      background: var(--green);
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--dark-green);
+    }
+
+    .btn.gold {
+      background: var(--gold);
+      color: #111827;
+    }
+
+    .qr-box {
+      text-align: center;
+      background: #f9fafb;
+      border-radius: 18px;
+      padding: 20px;
+      border: 2px dashed #cbd5e1;
+    }
+
+    .qr-box img {
+      max-width: 220px;
+      width: 100%;
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .qr-box h4 {
+      color: var(--green);
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 28px;
+      border-left: 6px solid var(--green);
+    }
+
+    .special {
+      background: linear-gradient(135deg, var(--dark-green), var(--green));
+      color: white;
+      text-align: center;
+    }
+
+    .special h2 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      margin-bottom: 12px;
+    }
+
+    .special p {
+      max-width: 780px;
+      margin: auto;
+      font-size: 1.15rem;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    footer h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #d1d5db;
+      margin-bottom: 6px;
+    }
+
+    .footer-links {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #86efac;
+      font-weight: 700;
+    }
+
+    @media (max-width: 800px) {
+      .location-card,
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 50px 16px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero" id="home">
+    <!-- Optional logo image. Upload your profile logo as images/logo.png -->
+    <!-- <img class="hero-logo" src="images/logo.png" alt="Global Food Express Logo"> -->
+
+    <h1>
+      Global Food
+      <br />
+      <span class="express">Express</span>
+    </h1>
+
+    <p>
+      Indo-Pak & Mediterranean Grocery Store serving the community with fresh produce,
+      authentic spices, pantry essentials, frozen foods, snacks, and
+      <strong>100% Zabiha Halal</strong> products.
+    </p>
+
+    <div class="hero-badges">
+      <span class="badge">Fresh Produce</span>
+      <span class="badge">Authentic Spices</span>
+      <span class="badge">100% Zabiha Halal</span>
+      <span class="badge">Wide Variety</span>
+      <span class="badge">Friendly Service</span>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#products">Products</a>
+      <a href="#locations">Locations</a>
+      <a href="#whatsapp">WhatsApp Groups</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>What We Offer</h2>
+        <p>Your one-stop shop for Indo-Pak and Mediterranean groceries.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">🥬</div>
+          <h3>Fresh Produce</h3>
+          <p>Fresh vegetables, fruits, herbs, and daily grocery essentials for your family.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌶️</div>
+          <h3>Authentic Spices</h3>
+          <p>Indo-Pak and Mediterranean spices, masalas, seasonings, lentils, and pantry items.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🍚</div>
+          <h3>Rice & Pantry</h3>
+          <p>Basmati rice, flour, oils, pickles, sauces, canned goods, and everyday essentials.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🥩</div>
+          <h3>100% Zabiha Halal</h3>
+          <p>Quality halal products and meat selections for our local community.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">❄️</div>
+          <h3>Frozen Foods</h3>
+          <p>Frozen snacks, meals, breads, desserts, and family favorites.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🍪</div>
+          <h3>Snacks & Sweets</h3>
+          <p>Imported snacks, biscuits, sweets, tea, drinks, and seasonal items.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="locations" id="locations">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Locations</h2>
+        <p>Visit the Global Food Express location nearest to you.</p>
+      </div>
+
+      <!-- Rosenberg Location -->
+      <div class="location-card" id="rosenberg">
+        <div>
+          <span class="location-tag">Rosenberg Location</span>
+          <h3>Global Food Express - Rosenberg</h3>
+
+          <p class="info-line">
+            <strong>Address:</strong><br />
+            235 Minonite Rd #120,<br />
+            Rosenberg, TX 77469
+          </p>
+
+          <p class="info-line">
+            <strong>Phone:</strong><br />
+            <a href="tel:+18324516217">(832) 451-6217</a>
+          </p>
+
+          <p class="info-line">
+            <strong>Specialty:</strong><br />
+            Indo-Pak & Mediterranean Grocery | 100% Zabiha Halal
+          </p>
+
+          <div class="buttons">
+            <a class="btn" href="tel:+18324516217">Call Rosenberg</a>
+            <a class="btn gold" target="_blank" href="https://www.google.com/maps/search/?api=1&query=235+Minonite+Rd+%23120+Rosenberg+TX+77469">Get Directions</a>
+          </div>
+        </div>
+
+        <div class="qr-box" id="whatsapp">
+          <img src="images/rosenberg-qr.png" alt="Global Food Express Rosenberg WhatsApp QR Code" />
+          <h4>Join Rosenberg WhatsApp Group</h4>
+          <p>Scan the QR code for updates, specials, and new arrivals.</p>
+        </div>
+      </div>
+
+      <!-- Synott Location -->
+      <div class="location-card" id="synott">
+        <div>
+          <span class="location-tag">Synott Location</span>
+          <h3>Global Food Express - Synott</h3>
+
+          <p class="info-line">
+            <strong>Address:</strong><br />
+            10560 Synott Rd,<br />
+            Sugar Land, TX 77498
+          </p>
+
+          <p class="info-line">
+            <strong>Phone:</strong><br />
+            <a href="tel:+12818794261">(281) 879-4261</a>
+          </p>
+
+          <p class="info-line">
+            <strong>Specialty:</strong><br />
+            Indo-Pak & Mediterranean Grocery | 100% Zabiha Halal
+          </p>
+
+          <div class="buttons">
+            <a class="btn" href="tel:+12818794261">Call Synott</a>
+            <a class="btn gold" target="_blank" href="https://www.google.com/maps/search/?api=1&query=10560+Synott+Rd+Sugar+Land+TX+77498">Get Directions</a>
+          </div>
+        </div>
+
+        <div class="qr-box">
+          <img src="images/synott-qr.png" alt="Global Food Express Synott WhatsApp QR Code" />
+          <h4>Join Synott WhatsApp Group</h4>
+          <p>Scan the QR code for updates, specials, and new arrivals.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="special">
+    <div class="container">
+      <h2>100% Zabiha Halal</h2>
+      <p>
+        Global Food Express proudly serves families looking for quality groceries,
+        trusted halal products, authentic flavors, and friendly service.
+      </p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Global Food Express</h2>
+        <p>Quality you trust. Flavors you love.</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-box">
+          <h3>Serving the Local Community</h3>
+          <p>
+            Global Food Express is your local Indo-Pak and Mediterranean grocery store.
+            We serve families across Rosenberg, Richmond, Sugar Land, and the Fort Bend area
+            with fresh groceries, authentic ingredients, and friendly customer service.
+          </p>
+        </div>
+
+        <div class="about-box">
+          <h3>Fresh, Authentic & Convenient</h3>
+          <p>
+            From spices and rice to frozen foods, snacks, produce, and halal products,
+            we bring the flavors of home closer to your family.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h3>Global Food Express</h3>
+    <p>Indo-Pak & Mediterranean Grocery | 100% Zabiha Halal</p>
+
+    <p><strong>Rosenberg:</strong> 235 Minonite Rd #120, Rosenberg, TX 77469 | (832) 451-6217</p>
+    <p><strong>Synott:</strong> 10560 Synott Rd, Sugar Land, TX 77498 | (281) 879-4261</p>
+
+    <div class="footer-links">
+      <a href="#rosenberg">Rosenberg Location</a>
+      <a href="#synott">Synott Location</a>
+      <a href="#products">Products</a>
+      <a href="#whatsapp">WhatsApp Groups</a>
+    </div>
+  </footer>
+
+</body>
+</html>
