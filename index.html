@@ -38,12 +38,16 @@
     }
 
     .hero {
-      background:
-        linear-gradient(rgba(6, 78, 59, 0.22), rgba(6, 78, 59, 0.28)),
-        url("images/hero-grocery.png");
-      background-size: cover;
-      background-position: center;
-      min-height: 430px;
+      background: #064e3b;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .hero-logo {
@@ -372,8 +376,9 @@
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        min-height: 300px;
+      .hero img {
+        width: 100%;
+        height: auto;
       }
 
       .intro {
@@ -393,7 +398,9 @@
 
 <body>
 
-  <header class="hero" id="home" aria-label="Global Food Express grocery banner"></header>
+  <header class="hero" id="home" aria-label="Global Food Express grocery banner">
+    <img src="images/hero-grocery.png" alt="Global Food Express Indo-Pak and Mediterranean Grocery banner" />
+  </header>
 
   <nav class="nav">
     <div class="nav-inner">
