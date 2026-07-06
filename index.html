@@ -42,12 +42,15 @@
       padding: 0;
       margin: 0;
       overflow: hidden;
+      text-align: center;
     }
 
     .hero img {
       display: block;
       width: 100%;
-      height: auto;
+      height: clamp(260px, 31vw, 430px);
+      object-fit: cover;
+      object-position: center center;
     }
 
     .hero-logo {
