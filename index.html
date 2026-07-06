@@ -39,13 +39,18 @@
 
     .hero {
       background:
-        linear-gradient(rgba(6, 78, 59, 0.88), rgba(6, 78, 59, 0.9)),
+        linear-gradient(rgba(6, 78, 59, 0.45), rgba(6, 78, 59, 0.55)),
         url("images/hero-grocery.png");
       background-size: cover;
       background-position: center;
       color: var(--white);
       text-align: center;
-      padding: 70px 20px 60px;
+      padding: 90px 20px 80px;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero-logo {
@@ -58,12 +63,13 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 7vw, 5rem);
+      font-size: clamp(2rem, 5vw, 4rem);
       font-weight: 900;
-      line-height: 1;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.55);
     }
 
     .express {
@@ -80,6 +86,8 @@
       max-width: 850px;
       margin: 18px auto 0;
       font-size: 1.2rem;
+      font-weight: 700;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.55);
     }
 
     .hero-badges {
@@ -354,11 +362,7 @@
     <!-- Optional logo image. Upload your profile logo as images/logo.png -->
     <!-- <img class="hero-logo" src="images/logo.png" alt="Global Food Express Logo"> -->
 
-    <h1>
-      Global Food
-      <br />
-      <span class="express">Express</span>
-    </h1>
+    <h1>Welcome to Global Food Express</h1>
 
     <p>
       Indo-Pak & Mediterranean Grocery Store serving the community with fresh produce,
