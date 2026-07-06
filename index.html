@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Global Food Express | Indo-Pak & Mediterranean Grocery</title>
 
   <meta name="description" content="Global Food Express offers Indo-Pak and Mediterranean groceries, fresh produce, authentic spices, frozen foods, snacks, and 100% Zabiha Halal products in Rosenberg and Synott/Sugar Land." />
@@ -287,26 +286,73 @@
     }
 
     .qr-box {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 24px;
+      border: 1px solid #dbe7dd;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       text-align: center;
-      background: #f9fafb;
-      border-radius: 18px;
-      padding: 20px;
-      border: 2px dashed #cbd5e1;
+      max-width: 330px;
+      width: 100%;
+      margin-left: auto;
+    }
+
+    .qr-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #eaf8ef;
+      color: var(--green);
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.2px;
     }
 
     .qr-box img {
-      max-width: 220px;
-      width: 100%;
-      background: white;
-      padding: 10px;
-      border-radius: 12px;
-      margin-bottom: 12px;
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      background: #ffffff;
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: inset 0 0 0 1px #f3f4f6;
     }
 
     .qr-box h4 {
+      color: #111827;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      margin: 2px 0 0;
+    }
+
+    .qr-subtitle {
       color: var(--green);
-      font-size: 1.2rem;
-      margin-bottom: 6px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      margin-top: -2px;
+    }
+
+    .qr-box p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin: 0;
+      max-width: 240px;
+    }
+
+    .qr-note {
+      width: 100%;
+      border-top: 1px solid #eef2f3;
+      padding-top: 12px;
+      font-size: 0.9rem;
+      color: #4b5563;
     }
 
     .about {
@@ -396,6 +442,11 @@
       .btn {
         text-align: center;
       }
+
+      .qr-box {
+        max-width: 100%;
+        margin-left: 0;
+      }
     }
   </style>
 </head>
@@ -403,7 +454,7 @@
 <body>
 
   <header class="hero" id="home" aria-label="Global Food Express grocery banner">
-    <img class="hero-banner-img" src="images/hero-grocery-v2.png" alt="Global Food Express grocery banner">
+    <img src="images/hero-grocery.png" alt="Global Food Express Indo-Pak and Mediterranean Grocery banner" />
   </header>
 
   <nav class="nav">
@@ -514,14 +565,17 @@
 
           <div class="buttons">
             <a class="btn" href="tel:+18324516217">Call Rosenberg</a>
-            <a class="btn gold" target="_blank" href="https://www.google.com/maps/place/Global+Food+Express+Rosenberg/@29.5418749,-95.7452035,16z/data=!3m1!4b1!4m6!3m5!1s0x86411d007a700e77:0x60e1be721e0ff645!8m2!3d29.5418703!4d-95.7426286!16s%2Fg%2F11mrvlcbfk?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D">Get Directions</a>
+            <a class="btn gold" target="_blank" href="https://www.google.com/maps/search/?api=1&query=235+Minonite+Rd+%23120+Rosenberg+TX+77469">Get Directions</a>
           </div>
         </div>
 
         <div class="qr-box" id="whatsapp">
+          <div class="qr-label">WhatsApp Group</div>
           <img src="images/rosenberg-qr.png.jpeg" alt="Global Food Express Rosenberg WhatsApp QR Code" />
-          <h4>Join Rosenberg WhatsApp Group</h4>
-          <p>Scan the QR code for updates, specials, and new arrivals.</p>
+          <h4>Join Our Rosenberg Community</h4>
+          <div class="qr-subtitle">Store updates, specials & new arrivals</div>
+          <p>Scan this QR code with your phone camera to join the Rosenberg WhatsApp group.</p>
+          <div class="qr-note">Best for mobile users. Open your camera, scan, and tap the WhatsApp link.</div>
         </div>
       </div>
 
@@ -549,14 +603,17 @@
 
           <div class="buttons">
             <a class="btn" href="tel:+12818794261">Call Synott</a>
-            <a class="btn gold" target="_blank" href="https://www.google.com/maps/search/?api=1&query=10560+Synott+Rd+Sugar+Land+TX+77498">Get Directions</a>
+            <a class="btn gold" target="_blank" href="https://www.google.com/maps/search/?api=1&query=235+Minonite+Rd+%23120+Rosenberg+TX+77469">Get Directions</a>
           </div>
         </div>
 
         <div class="qr-box">
+          <div class="qr-label">WhatsApp Group</div>
           <img src="images/synott-qr.png.jpeg" alt="Global Food Express Synott WhatsApp QR Code" />
-          <h4>Join Synott WhatsApp Group</h4>
-          <p>Scan the QR code for updates, specials, and new arrivals.</p>
+          <h4>Join Our Synott Community</h4>
+          <div class="qr-subtitle">Store updates, specials & new arrivals</div>
+          <p>Scan this QR code with your phone camera to join the Synott WhatsApp group.</p>
+          <div class="qr-note">Best for mobile users. Open your camera, scan, and tap the WhatsApp link.</div>
         </div>
       </div>
 
